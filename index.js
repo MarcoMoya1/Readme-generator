@@ -54,10 +54,10 @@ const questions = [
     },
 
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: "What license would you like to use for this project?",
-        choices: ['GNU GPLv3', 'BSD3', 'MIT', 'Mozilla public license 3'],
+        choices: ['GNU GPLv3', 'BSD3', 'MIT'],
         default: 'GNU GPLv3'
     
     },
@@ -65,15 +65,20 @@ const questions = [
     {
         type: 'input',
         name: 'contribution',
-        message: "Will anyone be contributing to this project with you, if so please enter their github Id's.",
-        default: false 
+        message: "Will anyone be contributing to this project with you, if so please enter their github Id.",
+        
     },
 
     {
         type: 'input',
         name: 'tests',
-        message: "to test the application run a command of 'npm test' ",
+        message: "To test the application run a command of 'npm test' ",
         default: "npm test"
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: "For any questions feel free to reach out to (Email): "
     },
 
 
@@ -89,7 +94,10 @@ function init() {
         const readmeData = generateMarkdown(answers);
         fs.writeFile('./README.md', readmeData, err => {
             if(err) throw new Error(err);
-            console.log('');
+            
+        console.log('Success: new README.md file is generated');
+
+
         });
     });
 }
