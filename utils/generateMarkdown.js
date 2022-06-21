@@ -1,5 +1,8 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+
+function generateMarkdown(data) {
+
 function renderLicenseBadge(license) {
   const badges = {
     gnugplv3: '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg](https://www.gnu.org/licenses/lgpl-3.0)',
@@ -30,11 +33,9 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+// function generateMarkdown(data) {
   return `# ${data.title}
 
-
-  ${this.renderLicenseBadge(data.license)}
 
   ## Table of Content 
   - [Project description](#Description)
@@ -42,7 +43,6 @@ function generateMarkdown(data) {
   - [Usage](#Usage)
   - [License](#License)
   - [Contribution](#Contribution)
-  - [Tests](#Tests) 
   - [Questions](#Questions)
 
   ## Description
@@ -55,13 +55,13 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-  ${this.renderLicenseSection(data.license)}
+  ${data.license}
+  
 
   ## Contribution
   ${data.contribution}
 
-  ## Tests
-  ${data.tests}
+ 
 
   ## Questions 
   ${data.questions}
