@@ -10,12 +10,13 @@
   - [Questions](#Questions)
 
   ## Description
-  Simple application to create readmes using node
+  Simple application to create a README.md file using Node
 
   ## Installation
   npm install
 
   ## Usage
+  Generating README.md files
   
 
   ## License
