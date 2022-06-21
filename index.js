@@ -28,16 +28,16 @@ const questions = [
 
     {
         type: 'input',
-        name: 'Github id',
+        name: 'github',
         message: "Please Enter your GitHub ID : ",
-        validate: githubIdInput => {
-            if(githubIdInput){
-                return true;
-            } else {
-                alert(" Please enter your GitHub ID");
-                return false;
-            } 
-        }
+        // validate: githubIdInput => {
+        //     if(githubIdInput){
+        //         return true;
+        //     } else {
+        //         alert(" Please enter your GitHub ID");
+        //         return false;
+        //     } 
+        // }
     },
 
     {
