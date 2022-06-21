@@ -71,12 +71,6 @@ const questions = [
 
     {
         type: 'input',
-        name: 'tests',
-        message: "To test the application run a command of 'npm test' ",
-        default: "npm test"
-    },
-    {
-        type: 'input',
         name: 'questions',
         message: "For any questions feel free to reach out to (Email): "
     },
